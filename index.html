@@ -113,6 +113,11 @@
         "Who is the smartest girl?",
         "Who is the sweetest girl?"
       ];
+      const ans = [
+        "Who is the most prettiest girl",
+        "Who is the smartest girl",
+        "Who is the sweetest girl"
+      ];
       let index = 0;
       const questionDisplay = document.getElementById("questionDisplay");
       const inputContainer = document.getElementById("inputContainer");
@@ -132,7 +137,7 @@
 
       submitButton.addEventListener("click", function() {
         if (index < questions.length) {
-          questionDisplay.innerHTML += `<p class='answer'>Correct! Srey Neang is the ${questions[index].split("Who is the ")[1]}</p>`;
+          questionDisplay.innerHTML += `<p class='answer'>Correct! Srey Neang is the ${ans[index].split("Who is the ")[1]}</p>`;
           index++;
           setTimeout(askNextQuestion, 1500);
         }
